@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.OrderActivity">
+
+    <ImageView
+        android:id="@+id/iv_live_mas"
+        android:layout_width="@dimen/order_screen_left_bar_width"
+        android:layout_height="@dimen/header_height"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:scaleType="fitCenter"
+        android:background="@color/black"
+        android:src="@drawable/taco_bell_live_mas"
+        android:transitionName="@string/live_mas_logo_transition_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_menu_category"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/header_height"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center"
+        android:textColor="@color/colorPrimaryText"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/divider3"
+        app:layout_constraintStart_toEndOf="@+id/iv_live_mas"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_order_cost"
+        android:layout_width="@dimen/cost_width"
+        android:layout_height="@dimen/header_height"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:textColor="@color/colorPrimaryText"
+        android:gravity="center"
+        android:text="$0.00"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_happier_hour"
+        android:layout_width="260dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/happier_hour_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <fragment
+        android:id="@+id/menu_category_fragment_container"
+        android:name="com.youngmlee.tacobellkiosk.ui.MenuCategoryListFragment"
+        android:layout_width="@dimen/order_screen_left_bar_width"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/iv_happier_hour"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider2" />
+
+    <Button
+        android:id="@+id/b_cancel_order"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/colorPrimaryLight"
+        android:padding="8dp"
+        android:text="@string/cancel"
+        android:drawablePadding="8dp"
+        android:drawableStart="@drawable/ic_cancel"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iv_happier_hour"
+        app:layout_constraintTop_toBottomOf="@+id/menu_item_list_fragment_container" />
+
+    <Button
+        android:id="@+id/b_checkout"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/colorPrimaryLight"
+        android:drawableStart="@drawable/ic_shopping_cart"
+        android:padding="8dp"
+        android:text="@string/checkout"
+        android:drawablePadding="8dp"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <fragment
+        android:id="@+id/menu_item_list_fragment_container"
+        android:name="com.youngmlee.tacobellkiosk.ui.MenuItemListFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/b_checkout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/menu_category_fragment_container"
+        app:layout_constraintTop_toBottomOf="@+id/divider2" />
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_menu_category" />
+
+    <View
+        android:id="@+id/divider3"
+        android:layout_width="2dp"
+        android:layout_height="71dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintBottom_toTopOf="@+id/menu_item_list_fragment_container"
+        app:layout_constraintEnd_toStartOf="@+id/tv_order_cost"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

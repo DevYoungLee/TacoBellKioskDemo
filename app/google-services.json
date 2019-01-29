@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "415481857877",
+    "firebase_url": "https://tacobellkiosk-ccbf0.firebaseio.com",
+    "project_id": "tacobellkiosk-ccbf0",
+    "storage_bucket": "tacobellkiosk-ccbf0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:415481857877:android:617b81d6ef467f10",
+        "android_client_info": {
+          "package_name": "com.youngmlee.tacobellkiosk"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "415481857877-tburritos090mjpp3i80f4pti1pqkjkj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.youngmlee.tacobellkiosk",
+            "certificate_hash": "51d53ac803845a42cb7a2357c9c620d708a9dfcf"
+          }
+        },
+        {
+          "client_id": "415481857877-k8ejnu6pk4ve6jejk2nekof2bblnr8u0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBIeFT0Kb2MhrEQ0uqfSldlvlpBXWd_hTw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "415481857877-k8ejnu6pk4ve6jejk2nekof2bblnr8u0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.CheckoutActivity">
+
+    <TextView
+        android:id="@+id/tv_checkout_header"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/order_summary"
+        android:textColor="@color/colorPrimaryText"
+        android:textSize="42sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/divider"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_order_summary_list"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_order_subtotal_cost"
+        app:layout_constraintEnd_toStartOf="@+id/divider"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_checkout_header" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="2dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/b_back_to_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/colorPrimaryLight"
+        android:padding="8dp"
+        android:textSize="32sp"
+        android:text="@string/go_back"
+        android:drawablePadding="8dp"
+        android:drawableStart="@drawable/ic_backspace"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_order_subtotal_cost"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="end"
+        android:textColor="@color/colorSecondaryText"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_order_tax_cost"
+        app:layout_constraintEnd_toStartOf="@+id/divider"
+        app:layout_constraintStart_toEndOf="@+id/b_back_to_menu" />
+
+    <TextView
+        android:id="@+id/tv_order_tax_cost"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="end"
+        android:textColor="@color/colorSecondaryText"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_order_total_cost"
+        app:layout_constraintEnd_toStartOf="@+id/divider"
+        app:layout_constraintStart_toEndOf="@+id/b_back_to_menu" />
+
+    <TextView
+        android:id="@+id/tv_order_total_cost"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="end"
+        android:textColor="@color/colorPrimaryText"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/divider"
+        app:layout_constraintStart_toEndOf="@+id/b_back_to_menu" />
+
+    <Button
+        android:id="@+id/b_pay_with_cash"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryLight"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/pay_with_cash"
+        app:layout_constraintBottom_toTopOf="@+id/b_pay_with_card"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/divider" />
+
+    <Button
+        android:id="@+id/b_pay_with_card"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryLight"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/pay_with_card"
+        app:layout_constraintBottom_toTopOf="@+id/b_pay_with_gift_card"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/divider" />
+
+    <Button
+        android:id="@+id/b_pay_with_gift_card"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryLight"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/pay_with_gift_card"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/divider" />
+
+    <ImageView
+        android:id="@+id/tv_choose_sauce_header"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/choose_your_sauce_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_checkout_header"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_mild_sauce"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/divider"
+        app:layout_constraintTop_toBottomOf="@+id/tv_choose_sauce_header"
+        app:srcCompat="@drawable/taco_bell_mild_sauce" />
+
+    <ImageView
+        android:id="@+id/iv_hot_sauce"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/np_mild_sauce"
+        app:layout_constraintTop_toBottomOf="@+id/tv_choose_sauce_header"
+        app:srcCompat="@drawable/taco_bell_hot_sauce" />
+
+    <ImageView
+        android:id="@+id/iv_fire_sauce"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toEndOf="@+id/divider"
+        app:layout_constraintTop_toBottomOf="@+id/iv_mild_sauce"
+        app:srcCompat="@drawable/taco_bell_fire_sauce" />
+
+    <ImageView
+        android:id="@+id/iv_diablo_sauce"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toEndOf="@+id/np_fire_sauce"
+        app:layout_constraintTop_toBottomOf="@+id/iv_hot_sauce"
+        app:srcCompat="@drawable/taco_bell_diablo_sauce" />
+
+    <NumberPicker
+        android:id="@+id/np_mild_sauce"
+        android:clickable="false"
+        android:layout_width="50dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="8dp"
+        android:descendantFocusability="blocksDescendants"
+        app:layout_constraintBottom_toTopOf="@+id/iv_mild_sauce"
+        app:layout_constraintStart_toEndOf="@+id/iv_mild_sauce"
+        app:layout_constraintTop_toBottomOf="@+id/iv_mild_sauce" />
+
+    <NumberPicker
+        android:id="@+id/np_hot_sauce"
+        android:layout_width="50dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="8dp"
+        android:clickable="false"
+        android:descendantFocusability="blocksDescendants"
+        app:layout_constraintBottom_toTopOf="@+id/iv_hot_sauce"
+        app:layout_constraintStart_toEndOf="@+id/iv_hot_sauce"
+        app:layout_constraintTop_toBottomOf="@+id/iv_hot_sauce" />
+
+    <NumberPicker
+        android:id="@+id/np_fire_sauce"
+        android:clickable="false"
+        android:layout_width="50dp"
+        android:layout_height="100dp"
+        android:descendantFocusability="blocksDescendants"
+        app:layout_constraintBottom_toTopOf="@+id/iv_fire_sauce"
+        app:layout_constraintStart_toEndOf="@+id/iv_fire_sauce"
+        app:layout_constraintTop_toBottomOf="@+id/iv_fire_sauce" />
+
+    <NumberPicker
+        android:id="@+id/np_diablo_sauce"
+        android:clickable="false"
+        android:layout_width="50dp"
+        android:layout_height="100dp"
+        android:descendantFocusability="blocksDescendants"
+        app:layout_constraintBottom_toTopOf="@+id/iv_diablo_sauce"
+        app:layout_constraintStart_toEndOf="@+id/iv_diablo_sauce"
+        app:layout_constraintTop_toBottomOf="@+id/iv_diablo_sauce" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="120dp"
+        android:layout_height="440dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="64dp"
+        app:layout_constraintStart_toEndOf="@+id/np_hot_sauce"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/hot_sauce_thermometer" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

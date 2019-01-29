@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <integer-array name="menu_category_list_icon">
+        <item>@drawable/new_icon</item>
+        <item>@drawable/combos_icon</item>
+        <item>@drawable/specialties_combo_icon</item>
+        <item>@drawable/tacos_icon</item>
+        <item>@drawable/burritos_icon</item>
+        <item>@drawable/quesadillas_icon</item>
+        <item>@drawable/nachos_icon</item>
+        <item>@drawable/value_menu_icon</item>
+        <item>@drawable/sweets_icon</item>
+        <item>@drawable/sides_icon</item>
+        <item>@drawable/drinks_icon</item>
+        <item>@drawable/power_menu_icon</item>
+        <item>@drawable/breakfast_icon</item>
+        <item>@drawable/vegetarian_icon</item>
+    </integer-array>
+
+</resources>

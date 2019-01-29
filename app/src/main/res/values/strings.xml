@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">Taco Bell Kiosk Demo</string>
+    <string name="live_mas_logo_transition_name">live_mas_logo_transition</string>
+    <string name="welcome_test">Ayyyy you\'ve chosen to Live Mas! \n Just click to start your order</string>
+    <string name="live_mas">Live Mas!</string>
+    <string name="taco_bell_menu">Taco Bell Menu</string>
+    <string name="checkout">CHECKOUT</string>
+    <string name="happier_hour_times">FROM 2:00 PM - 5:00 PM</string>
+    <string name="happier_hour">HAPPIER HOUR</string>
+    <string name="empty_order_message">You haven\'t ordered anything yet!</string>
+
+    <string-array name="menu_category_list">
+        <item>NEW</item>
+        <item>COMBOS</item>
+        <item>SPECIALTIES</item>
+        <item>TACOS</item>
+        <item>BURRITOS</item>
+        <item>QUESADILLAS</item>
+        <item>NACHOS</item>
+        <item>VALUE MENU</item>
+        <item>SWEETS</item>
+        <item>SIDES</item>
+        <item>DRINKS</item>
+        <item>POWER MENU</item>
+        <item>BREAKFAST</item>
+        <item>VEGETARIAN</item>
+    </string-array>
+
+    <string name="welcome_message">Welcome to Taco Bell \n Just tap to begin your order!</string>
+    <string name="order_summary">Order Summary</string>
+    <string name="pay_with_cash">Pay with Cash</string>
+    <string name="pay_with_card">Pay with Card</string>
+    <string name="pay_with_gift_card">Pay with Gift Card</string>
+    <string name="choose_your_sauce">Choose your sauce</string>
+    <string name="keep_browsing">KEEP BROWSING</string>
+    <string name="added_successfully">ADDED SUCCESSFULLY</string>
+    <string name="add_to_order">Add to Order</string>
+    <string name="add_to_order_question">Add to Order?</string>
+
+
+    <string name="thank_you_for_choosing_tacobell">ENJOY!</string>
+    <string name="make_another_order">Make Another Order</string>
+    <string name="cancel">CANCEL</string>
+    <string name="go_back">Go Back</string>
+</resources>
